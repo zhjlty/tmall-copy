@@ -1,0 +1,680 @@
+/*从头再来*/
+*{
+  padding: 0;
+  margin: 0;
+}
+/*icon*/
+ @font-face {
+   font-family: 'iconfont';  /* project id 614453 */
+   src: url('../icon/iconfont.eot');
+   src: url('../icon/iconfont.eot?#iefix') format('embedded-opentype'),
+   url('../icon/iconfont.woff') format('woff'),
+   url('../icon/iconfont.ttf') format('truetype'),
+   url('../icon/iconfont.svg#iconfont') format('svg');
+ }
+ @font-face{
+    font-family: "fpIconFont";
+    src: url('../icon/font_1460528889_0546324.woff');
+}
+ .iconfont {
+     font-family: 'iconfont'!important;
+     color: red;
+     font-size: 12px;
+     font-style: normal;
+     margin-right: 2px;
+     position: relative;
+     top:1px;
+ }
+
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.clearfix{
+  zoom:1;
+}
+
+/*左浮动*/
+.fl{
+  float: left;
+}
+
+/*右浮动*/
+.fr{
+  float: right;
+}
+
+/*字体*/
+$nav-font-size:12px;
+
+/*定义颜色*/
+$bg_color:#F2F2F2;
+$color:#999;
+$a_hover:rgb(255,0,54);
+$span_color:#666;
+$border_color:#e5e5e5;
+
+$height:32px;
+body {
+    -webkit-font-smoothing: antialiased;
+}
+// ====================================topNav部分================================================
+a{
+  text-decoration: none;
+  outline: 0;
+}
+//==========================================中间宽度=====================
+.tmall_UI{
+  width: 1230px;
+  margin: 0 auto;
+}
+
+#topNav{
+  position: relative;
+  display: block;
+  font-size:$nav-font-size;
+  font-weight: 400;
+  background-color: $bg_color;
+  height: $height;
+  width: auto;
+  line-height: $height;
+  border-bottom: 1px #e5e5e5 solid;
+  z-index: 9999;
+  .container-body{
+    width: 1230px;
+    position: relative;
+    left: -15px;
+    margin: auto;
+    @clearfix:after;
+  }
+  .container{
+    width: 100%;
+    margin: 0 auto;
+    height: $height;
+    line-height: $height;
+    position: relative;
+    color:$color;
+    @clearfix:after;
+  }
+  a:link,a:visited{
+    color:$color;
+  }
+  &:hover{
+    color:rgb(255,0,54);
+  }
+  /* nav的左边部分 */
+.nav-left{
+  a{
+    margin-left: 15px;
+    &:hover{
+      color:$a_hover;
+    }
+  }
+}
+
+  /* nav的右边部分 */
+.nav-right{
+  .nav-right-ul{
+    height: $height;
+    line-height: $height;
+    position: absolute;
+    right: 0;
+    top:0;
+    display: block;
+    // -webkit-margin-before: 1em;
+    // -webkit-margin-after: 1em;
+    // -webkit-margin-start: 0px;
+    // -webkit-margin-end: 0px;
+    // // -webkit-padding-start: 40px;
+    li{
+      float: left;
+      position: relative;
+      list-style: none;
+      a:hover{
+        color: red;
+      }
+      #two_code{
+
+      }
+      .dropdown{
+        position: relative;
+        line-height: $height;
+        &:hover{
+          .dropdown_title{
+            background-color: white;
+            border: #eee solid;
+            border-width: 0 1px 0 1px;
+            border-bottom: 1px white solid !important;
+          }
+          a:hover{
+            text-decoration: underline;
+            color: $a_hover;
+          }
+          .dropdown_menu{
+            display: block;
+          }
+        }
+        .dropdown_title{
+          height: 32px;
+          // width: 48px;
+          padding:0 14px 0 10px;
+          display: block;
+          border: transparent solid;
+          border-width: 0 1px;
+          position: relative;
+
+        }
+      }
+      .dropdown_menu{
+        position: absolute;
+        top: 33px;
+        padding: 8px 10px;
+        border: #eee solid;
+        border-width: 0 1px 1px;
+        display: none;
+        a{
+          display: block;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+}
+.divider{
+  top: 9px;
+  display: inline-block;
+  height: 14px;
+  line-height: 14px;
+  position: relative;
+  left: 0;
+  font-size: 0;
+  border-left: 1px #ccc solid;
+  margin:0 14px 0 5px;
+}
+
+#menu_1{
+  width: 72px;
+  background-color: white;
+}
+#menu_2{
+  width: 60px;
+  z-index: 2001;
+  background-color: white;
+}
+#menu_5{
+  left:-63px;
+  background: white;
+}
+#menu_3{
+  width: 72px;
+}
+#menu_4{
+  width: 72px;
+}
+.buyCartNum{
+  margin:0 1px 0 1px;
+}
+.cart{
+  margin:0 5px 0 2px;
+}
+.taobao_websit{
+  margin:0 5px 0 15px;
+}
+
+#menu_3{
+  right: 0;
+  width: 120px;
+  background-color: white;
+  li{
+    float: none;
+    border-bottom: 1px #999 dotted;
+    h3{
+      padding-left: 5px;
+      color: #666;
+    }
+    a{
+      float: left;
+      padding: 1px 5px;
+      display: inline-block;
+    }
+  }
+}
+
+#menu_4{
+  // display: block!important;
+  right: 0;
+  width: 1172px;
+  height: 160px;
+  background-color: white;
+  ul{
+    li{
+      float: left;
+    }
+    .panel_box_1{
+      width: 455px;
+    }
+    .panel_box_2{
+      width: 455px;
+    }
+    .panel_box_3{
+      width: 200px;
+    }
+      h5{
+      padding:5px 0 0 10px;
+      font-size: 16px;
+
+    }
+      a{
+        position: relative;
+        float: left;
+        padding: 9px 13px 9px 10px;
+        display: inline-block;
+        width: 68px;
+
+      }
+    }
+  }
+  .dropdown_menu a .new{
+    position: absolute;
+    top: 0px;
+    font-family: fpIconFont;
+    font-size: normal;
+    font-style: normal;
+    color:#68be00;
+    &:before{
+      content:'\e621';
+    }
+  }
+  .dropdown_menu a .hot{
+    position: absolute;
+    top: 0;
+    font-family: fpIconFont;
+    font-size: normal;
+    font-style: normal;
+    color:#FF4A18;
+    &:before{
+      content:'\e622';
+    }
+  }
+
+  #hot{
+    color: rgb(228, 115, 70);
+  }
+  #market{
+    color:rgb(19, 164, 226);
+  }
+  #help{
+    color:#666;
+  }
+
+  #menu_4 .panel_box_1 a{
+    color:#666;
+    &:hover{
+      color: rgb(228, 115, 70)!important;
+    }
+  }
+  #menu_4 .panel_box_2 a{
+    color:#666;
+    &:hover{
+      color: rgb(19, 164, 226)!important;
+    }
+  }
+  #menu_4 .panel_box_3 a{
+    color:#666;
+    &:hover{
+      color: #666!important;
+    }
+  }
+
+  .divider_long{
+    top: 25px;
+    display: inline-block;
+    height: 120px;
+    line-height: 120px;
+    position: relative;
+    left: 0;
+    font-size: 0;
+    border-left: 1px #eee solid;
+    padding: 0 15px 0 15px;
+  }
+
+  /*小箭头翻转*/
+b{
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    right: 6px;
+    top: 14px;
+    width: 0;
+    height: 0;
+    border-width: 3px;
+    border-style: solid dashed dashed;
+    border-color: #bbb transparent transparent;
+    font-size: 0;
+    line-height: 0;
+}
+.dropdown:hover .dropdown_title b {
+    -webkit-backface-visibility: hidden;
+    border-color: #bbb transparent transparent;
+    -webkit-transition: -webkit-transform .2s ease-in;
+    -moz-transition: -moz-transform .2s ease-in;
+    -o-transition: -o-transform .2s ease-in;
+    transition: transform .2s ease-in;
+    -moz-transform: rotate(180deg);
+    -moz-transform-origin: 50% 30%;
+    -webkit-transform: rotate(180deg);
+    -webkit-transform-origin: 50% 30%;
+    -o-transform: rotate(180deg);
+    -o-transform-origin: 50% 30%;
+    transform: rotate(180deg);
+    transform-origin: 50% 30%
+}
+
+/*header部分*/
+.header{
+  height: 130px;
+  .header_container{
+    width: 1230px;
+    height: 106px;
+    margin: 0 auto;
+    position: relative;
+    .header_img{
+    position: absolute;
+    left: -55px;
+    width: 290px;
+    height: 130px;
+      .img_tmall{
+        width: 240px;
+        height: 130px;
+        padding: 0 25px;
+      }
+    }
+    .header_banner{
+      float: right;
+      height: 70px;
+      width: 200px;
+      padding: 2px 0 0 102.5px;
+    }
+    .tmall_search{
+      float: right;
+      padding-top: 38px;
+      overflow: hidden;
+      width: 625px;
+      height: 68px;
+      .mall_search_form{
+        position: relative;
+        height: 36px;
+        border: red solid;
+        border-width: 2px 0 2px 2px;
+        fieldset{
+          border: 0;
+          position: relative;
+          display: block;
+          margin: 0;
+          padding: 0;
+          legend{
+            display: none;
+          }
+          .tmall_search_input{
+            position: relative;
+            width: 623px;
+            float: left;
+            height: 36px;
+            vertical-align: middle;
+            font-size: 12px;
+            .tmall_search_bar{
+              position: relative;
+              display: inline-block;
+              width: 491px;
+              height: 36px;
+              border: none;
+              box-sizing: border-box;
+              padding: 5px 3px 5px 5px;
+
+            }
+          }
+          .tmall_search_btn{
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 0;
+            width: 132px;
+            height: 36px;
+            background-color: red;
+            color: white;
+            letter-spacing: 5px;
+            font-weight: 700;
+            font-size: 18px;
+          }
+        }
+      }
+      ul{
+        li{
+          float: left;
+          list-style: none;
+          display: inline-block;
+          font-size: 14px;
+          padding: 6px 0;
+          a{
+            color: $color;
+          }
+          .hot_query_light{
+            color: $a_hover;
+          }
+        }
+        .divider{
+          top: 7px;
+          left: 4px;
+          height: 1.5px;
+          line-height: 1.5px;
+        }
+      }
+    }
+    }
+  }
+//===================================中间部分============================================================
+.content{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #eee;
+}
+//===================================底部footer=========================================================
+.footer{
+  .tmall_ensure{
+      background: url('../images/T1ZjhhFpRkXXX1CdwH-1190-100.jpg') no-repeat;
+      width: 1190px;
+      height: 100px;
+      margin: 25px auto;
+      padding: 0;
+  }
+  .tmall_desc_ul{
+    margin: 18px auto;
+    display: block;
+    ul{
+      float: left;
+      padding:5px 76px;
+      li{
+        list-style: none;
+        padding-top: 4px;
+      }
+      h3{
+        color: #666;
+      }
+      a{
+        color: $color;
+        font-size: 13px;
+      }
+
+
+    }
+  }
+}
+
+.slice{
+  left: 200px;
+  border: #eee solid;
+  border-width: 2px 0 0 0;
+  width: 1230px;
+  margin: 0 auto;
+}
+
+.tmall_small{
+  clear:left;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 25px;;
+  border-bottom: 2px red solid;
+  img{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 290px;
+  }
+}
+
+.tmall_copyright{
+  background: black;
+  width: 100%;
+  height: 180px;
+  color: white;
+  .tmall_info{
+    font-size: 12px;
+    padding: 10px 0;
+    a{
+      padding-right: 6px;
+    }
+  }
+  .other_link{
+    font-size: 12px;
+    padding: 10px 0;
+  }
+  .copyright{
+    font-size: 11px;
+    padding: 10px 0;
+    font-weight: 200;
+    a{
+      padding-right: 90px;
+    }
+  }
+  a{
+    color: white;
+  }
+}
+#copyright_end{
+  font-size: 10px;
+  font-weight: 100;
+}
+
+//=========================左边側栏导航==================================================
+.nav_side_left{
+  background: #ccc;
+  width: 36px;
+  height: 369px;
+  position: fixed;
+  top: 100px;
+  left: 170px;
+  color: white;
+  .mui_left_nav{
+    position: relative;
+    display: block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+    font-size: 12px;
+    outline:0;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px #eee solid;
+    background-color: rgba(0,0,0,.6);
+  }
+  .mui_left_name{
+    line-height: 12px;
+    width: 24px;
+    height: 28px;
+    margin: 6px auto;
+  }
+  .nav_side_left_header{
+    background: red;
+  }
+  .nav_side_left_body{
+    text-align: center;
+    a{
+      .hover,.click{
+        background: transparent;
+      }
+    }
+    .color_type_blue{
+      background-color: blue;
+    }
+    .color_type_pink{
+      background-color: pink;
+    }
+    .color_type_yellow{
+      background-color: yellow;
+    }
+    .color_type_green{
+      background-color: green;
+    }
+    .color_type_purple{
+      background-color: purple;
+    }
+    .color_type_red{
+      background-color: red;
+    }
+    .color_type_cyan{
+      background-color: cyan;
+    }
+    .color_type_deeppink{
+      background-color: deeppink;
+    }
+    }
+////////////////////////////////////////////////////////////////////
+
+
+
+
+
+  .nav_back{
+    background-color: rgba(0,0,0,.3);
+
+    i{
+      font-family: fpIconFont;
+      font-style: normal;
+      font-size: 18px;
+      &:before{
+          content: "\e636";
+      }
+    }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*bottom*/
