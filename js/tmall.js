@@ -16,15 +16,13 @@
 
 
 
+$(function() {
 
-
-
-
-
-
-
-
-
+    $('.nav_side_left_body').on('click',e=>{
+            $('.mui_left_nav').addClass('color_passive');
+            $(e.target).parent('.mui_left_nav').removeClass('color_passive');
+    })  
+})
 
 
 
