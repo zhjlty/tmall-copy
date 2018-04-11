@@ -652,6 +652,10 @@ b {
   text-align: center;
 }
 
+.nav_side_left .nav_side_left_body .color_passive{
+  background-color: gray !important;
+}
+
 .nav_side_left .nav_side_left_body a .hover, .nav_side_left .nav_side_left_body a .click {
   background: transparent;
 }
